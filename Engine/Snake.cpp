@@ -88,22 +88,12 @@ void Snake::addSnakeSize(int amount)
 	maxsize += amount;
 }
 
-int* Snake::xxarray()
+int Snake::xxget(int index) const
 {
-	//i dont think thats a good idea
-	static int ar[2500];
-	for (int i = 0; i < xvsize(); i++) {
-		ar[i] = xx[i];
-	}
-	return ar;
+	return xx[index];
 }
 
-int* Snake::yyarray()
+int Snake::yyget(int index) const
 {
-	//i dont think thats a good idea 
-	static int ar[2500];
-	for (int i = 0; i < yvsize(); i++) {
-		ar[i] =yy[i];
-	}
-	return ar;
+	return yy[index];
 }

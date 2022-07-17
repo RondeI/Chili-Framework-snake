@@ -20,10 +20,8 @@ void Apple::applecollision(Snake& snek) {
 }
 void Apple::applecolcheck(Snake& snek) {
 	bool temp = 0;
-	int* x = snek.xxarray();
-	int* y = snek.yyarray();
 	for (int i = 0; i < snek.xvsize() - 1; i++) {
-		if (ax== *(x+i) && ay == *(y + i)) {
+		if (ax==snek.xxget(i) && ay == snek.yyget(i)) {
 			temp = 1;
 		}
 	}
