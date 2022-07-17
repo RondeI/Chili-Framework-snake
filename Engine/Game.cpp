@@ -50,6 +50,7 @@ void Game::UpdateModel()
 	if (snek.__GameStart()) {
 		if (!apple.__appleSpawned) {
 			apple.applespawn();
+			apple.applecolcheck(snek);
 		}
 		snek.snekcollision(apple.__appleSpawned);
 	}

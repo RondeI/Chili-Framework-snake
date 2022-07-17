@@ -10,12 +10,24 @@ void Apple::applespawn() {
 	ax *= 16;
 	ay = rand() % 50;
 	ay *= 16;
-	__appleSpawned = 1;
 }
 void Apple::applecollision(Snake& snek) {
 	//snek touch apple = snek grow and new apple
 	if (ax == snek.xvsize() && ay == snek.yvsize()) {
 		__appleSpawned = 0;
 		snek.addSnakeSize(1);
+	}
+}
+void Apple::applecolcheck(Snake& snek) {
+	bool temp = 0;
+	int* x = snek.xxarray();
+	int* y = snek.yyarray();
+	for (int i = 0; i < snek.xvsize() - 1; i++) {
+		if (ax== *(x+i) && ay == *(y + i)) {
+			temp = 1;
+		}
+	}
+	if(temp==0){
+	__appleSpawned = 1;
 	}
 }

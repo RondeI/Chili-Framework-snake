@@ -14,6 +14,8 @@ public:
 	int xvsize();
 	int yvsize();
 	void addSnakeSize(int amount);
+	int* xxarray();
+	int* yyarray();
 private:
 	void velocity();
 	void LenUpdate();

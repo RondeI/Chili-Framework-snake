@@ -8,6 +8,7 @@ public:
 	void applecollision(Snake& snek);
 	void applespawn();
 	void draw(Graphics& gfx) const;
+	void applecolcheck(Snake& snek);
 public: 
 	bool __appleSpawned = 0;
 };

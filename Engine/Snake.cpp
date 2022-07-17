@@ -19,7 +19,6 @@ void Snake::velocity()
 }
 void Snake::snekcollision(bool& __appleSpawned)
 {
-	bool col = 0;
 	//snek touch snek body = ouchie :(
 	for (int i = 0; i < xx.size() - 1; i++) {
 		if (xx[xx.size() - 1] == xx[i] && yy[yy.size() - 1] == yy[i]) {
@@ -87,4 +86,24 @@ int Snake::yvsize()
 void Snake::addSnakeSize(int amount)
 {
 	maxsize += amount;
+}
+
+int* Snake::xxarray()
+{
+	//i dont think thats a good idea
+	static int ar[2500];
+	for (int i = 0; i < xvsize(); i++) {
+		ar[i] = xx[i];
+	}
+	return ar;
+}
+
+int* Snake::yyarray()
+{
+	//i dont think thats a good idea 
+	static int ar[2500];
+	for (int i = 0; i < yvsize(); i++) {
+		ar[i] =yy[i];
+	}
+	return ar;
 }
