@@ -55,7 +55,7 @@ void Snake::movement(MainWindow& wnd)
 	
 }
 void Snake::PosUpdate(float& time) {
-	if (time > 125.f - maxsize) {
+	if (time > 125.f - (maxsize*2)) {
 		velocity();
 		Box::loopScreen(x,y, 16, 16);
 		time = 0.f;
